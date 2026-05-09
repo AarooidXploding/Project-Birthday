@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <title>LetterCard-BDay By Legendryoy26</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;900&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas id="web-canvas"></canvas>
+
+<!-- ══════════════════════════════════════
+     SCENE 1 — ENVELOPE
+══════════════════════════════════════ -->
+<div id="scene-envelope" class="scene active">
+  <div class="corner-web cw-tl">
+    <svg viewBox="0 0 160 160" width="160" height="160">
+      <g stroke="#cc0000" stroke-width="1.2" fill="none" opacity="0.7">
+        <line x1="0" y1="0" x2="160" y2="80"/>
+        <line x1="0" y1="0" x2="120" y2="160"/>
+        <line x1="0" y1="0" x2="60"  y2="160"/>
+        <line x1="0" y1="0" x2="160" y2="30"/>
+        <path d="M 70,0 Q 50,40 0,60"/>
+        <path d="M 0,80 Q 60,60 100,0"/>
+        <path d="M 0,130 Q 80,100 150,0"/>
+        <path d="M 40,0 Q 28,28 0,38"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="spider-drop" id="spider-drop">
+    <div class="web-thread"></div>
+  </div>
+
+  <div id="envelope" class="envelope" tabindex="0" role="button" aria-label="Ketuk untuk membuka">
+    <div class="env-body">
+      <div class="env-stamp">
+        <svg viewBox="0 0 50 50" width="36" height="36">
+          <circle cx="25" cy="25" r="23" fill="#cc0000" stroke="#fff" stroke-width="1.5"/>
+          <ellipse cx="25" cy="29" rx="9"  ry="10" fill="#150000"/>
+          <ellipse cx="25" cy="19" rx="6"  ry="7"  fill="#150000"/>
+          <line x1="16" y1="23" x2="5"  y2="15" stroke="#150000" stroke-width="2"/>
+          <line x1="16" y1="28" x2="4"  y2="27" stroke="#150000" stroke-width="2"/>
+          <line x1="17" y1="34" x2="6"  y2="39" stroke="#150000" stroke-width="2"/>
+          <line x1="34" y1="23" x2="45" y2="15" stroke="#150000" stroke-width="2"/>
+          <line x1="34" y1="28" x2="46" y2="27" stroke="#150000" stroke-width="2"/>
+          <line x1="33" y1="34" x2="44" y2="39" stroke="#150000" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="env-flap"></div>
+      <div class="env-pocket">
+        <div class="env-label">You Have Message!</div>
+        <div class="env-sublabel">From:@Legendryou_26!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tap-hint-global">
+    <span class="thg-dot"></span>Klikk Dong Amplopnya!!
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SCENE 2 — LETTER CARD
+══════════════════════════════════════ -->
+<div id="scene-letter" class="scene">
+  <div class="corner-web cw-tl">
+    <svg viewBox="0 0 160 160" width="160" height="160">
+      <g stroke="#cc0000" stroke-width="1.2" fill="none" opacity="0.6">
+        <line x1="0" y1="0" x2="160" y2="80"/>
+        <line x1="0" y1="0" x2="60"  y2="160"/>
+        <path d="M 70,0 Q 50,40 0,60"/>
+        <path d="M 0,130 Q 80,100 150,0"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="scene2-title">
+    <span class="s2t-happy">Selamat </span>
+    <span class="s2t-bday">Ulang Tahunn!</span>
+  </div>
+
+  <div id="letter-card" class="letter-card" tabindex="0" role="button">
+    <div class="lc-panel">
+      <div class="lc-top-bar"><span>🎊 Yeyy New Message!!!</span></div>
+      <div class="lc-body">
+        <div class="lc-ig-row">
+          <div class="lc-ig-icon">
+            <img src="assets/images/ig-icon.png" alt="Instagram"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <svg viewBox="0 0 100 100" width="54" height="54" style="display:none">
+              <defs>
+                <linearGradient id="ig1" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#f09433"/>
+                  <stop offset="50%"  stop-color="#dc2743"/>
+                  <stop offset="100%" stop-color="#bc1888"/>
+                </linearGradient>
+              </defs>
+              <rect x="5" y="5" width="90" height="90" rx="22" fill="url(#ig1)"/>
+              <rect x="18" y="18" width="64" height="64" rx="16" fill="none" stroke="white" stroke-width="5"/>
+              <circle cx="50" cy="50" r="18" fill="none" stroke="white" stroke-width="5"/>
+              <circle cx="72" cy="28" r="5" fill="white"/>
+            </svg>
+          </div>
+          <div class="lc-notif-text">
+            <div class="lc-notif-title">@angelly0uw_26</div>
+            <div class="lc-notif-sub">❤️ 999+ &nbsp;·&nbsp; 💬 Waiting &nbsp;·&nbsp; 👤 Error</div>
+          </div>
+        </div>
+
+        <div class="lc-web-divider">
+          <svg viewBox="0 0 280 18" width="100%" height="18" preserveAspectRatio="none">
+            <line x1="0" y1="9" x2="280" y2="9" stroke="#cc0000" stroke-width="0.8" opacity="0.4"/>
+            <path d="M 0,9 Q 70,0 140,9 Q 210,18 280,9" stroke="#cc0000" stroke-width="1.5" fill="none" opacity="0.5"/>
+          </svg>
+        </div>
+
+        <div class="lc-spider-symbol">
+          <svg viewBox="0 0 120 56" width="100" height="48">
+            <ellipse cx="60" cy="36" rx="22" ry="16" fill="#cc0000"/>
+            <ellipse cx="60" cy="18" rx="15" ry="13" fill="#cc0000"/>
+            <line x1="38" y1="27"  x2="8"   y2="13"  stroke="#cc0000" stroke-width="4" stroke-linecap="round"/>
+            <line x1="38" y1="36"  x2="5"   y2="34"  stroke="#cc0000" stroke-width="4" stroke-linecap="round"/>
+            <line x1="38" y1="45"  x2="8"   y2="52"  stroke="#cc0000" stroke-width="4" stroke-linecap="round"/>
+            <line x1="82" y1="27"  x2="112" y2="13"  stroke="#cc0000" stroke-width="4" stroke-linecap="round"/>
+            <line x1="82" y1="36"  x2="115" y2="34"  stroke="#cc0000" stroke-width="4" stroke-linecap="round"/>
+            <line x1="82" y1="45"  x2="112" y2="52"  stroke="#cc0000" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="lc-cta">
+          <span>Klik dong suratnyaa! 🎉</span>
+          <span class="lc-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comic-pow">Anjayyy!</div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SCENE 3 — BALLOON TRANSITION
+══════════════════════════════════════ -->
+<div id="scene-balloons" class="scene">
+  <div id="balloons-container"></div>
+  <div class="swing-text">
+    <span class="st-emoji">🕷️</span>
+    <div class="swing-words">
+      <span class="sw sw1">Happy Birtday</span>
+      <span class="sw sw2">Deswitaa</span>
+      <span class="sw sw3">(Eh enjel aja deh)</span>
+      <span class="sw sw4">HBD Enjelll ^-^</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SCENE 4 — POSTER
+══════════════════════════════════════ -->
+<div id="scene-poster" class="scene">
+
+  <div class="hearts-container" id="hearts-container"></div>
+
+  <!-- Double-tap love animation layer -->
+  <div id="love-burst-layer" class="love-burst-layer" aria-hidden="true"></div>
+
+  <div class="poster-bg-text" aria-hidden="true">
+    <span>Happy</span>
+    <span>BIRTHDAY</span>
+    <span>Seventeen</span></span>
+    <span>Deswitaa</span>
+  </div>
+
+  <div class="corner-web cw-tl pcw">
+    <svg viewBox="0 0 180 180" width="180" height="180">
+      <g stroke="#cc0000" stroke-width="1.5" fill="none" opacity="0.45">
+        <line x1="0" y1="0" x2="180" y2="90"/>
+        <line x1="0" y1="0" x2="130" y2="180"/>
+        <line x1="0" y1="0" x2="180" y2="40"/>
+        <path d="M 80,0 Q 55,45 0,65"/>
+        <path d="M 0,90 Q 65,70 110,0"/>
+        <path d="M 0,140 Q 90,110 170,0"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="poster-content">
+    <div class="poster-date">09 May 2026</div>
+
+    <div class="poster-title-block">
+      <div class="ptb-happy">HAPPY</div>
+      <div class="ptb-bday">BIRTH<span class="red">DAY</span></div>
+    </div>
+
+    <!-- Instagram post frame -->
+    <div class="ig-post-frame">
+      <div class="ig-post-header">
+        <div class="ig-avatar">
+          <img src="assets/images/avatar.jpg" alt="Avatar"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ig-avatar-fb" style="display:none">RM</div>
+        </div>
+        <span class="ig-username">@angelly0uw_26</span>
+        <span class="ig-more">•••</span>
+      </div>
+
+      <!-- Carousel -->
+      <div class="carousel-wrapper" id="carousel-wrapper">
+        <div class="carousel-track" id="carousel-track"></div>
+        <div class="spidey-hint" id="spidey-hint">✉️ Surat Dari @Legendryou_26</div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+
+      <!-- Actions bar — like count is realtime -->
+      <div class="ig-post-actions">
+        <button class="iga-like-btn" id="iga-like-btn" aria-label="Like">
+          <svg class="like-heart-icon" id="like-heart-icon" viewBox="0 0 24 24" width="22" height="22">
+            <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+          </svg>
+          <span class="like-count" id="like-count">0</span>
+        </button>
+        <button class="iga-comment-btn" id="iga-comment-btn" aria-label="Komentar">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          <span class="comment-badge">Waiting</span>
+        </button>
+        <span class="iga-share">📤</span>
+      </div>
+
+      <!-- Comment bar — merah di atas, bukan background -->
+      <div class="ig-comment-bar" id="ig-comment-bar">
+        <div class="comment-bar-inner">
+          <span class="comment-love-icon">❤️</span>
+          <span class="comment-bar-text">Tinggalkan komentar...</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="poster-name">Selamat Ulang Tahun Enjell!!🥳</div>
+    <div class="poster-tagline">
+      “Happy sweet seventeen! Semoga selalu sehat yah, makin berrrsabarr, jangan marah-marah mulu ya, dan makin bahagia selalu akwokaowk”🫪
+    </div>
+
+    <div class="poster-balloons-row">
+      <span class="pb-item" style="--d:0s">🎈</span>
+      <span class="pb-item" style="--d:.25s">🎈</span>
+      <span class="pb-item" style="--d:.5s">🎈</span>
+      <span class="pb-item" style="--d:.75s">🎈</span>
+      <span class="pb-item" style="--d:1s">🎈</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     LETTER POPUP (foto ke-10)
+══════════════════════════════════════ -->
+<div id="letter-overlay" class="letter-overlay" aria-hidden="true">
+  <div class="lo-backdrop" id="lo-backdrop"></div>
+  <div class="lo-popup" id="lo-popup">
+    <button class="lo-close" id="lo-close" aria-label="Tutup">✕</button>
+    <div class="lo-web-top">
+      <svg viewBox="0 0 320 26" width="100%" height="26" preserveAspectRatio="none">
+        <line x1="0"   y1="0"  x2="320" y2="26" stroke="#cc0000" stroke-width="0.8" opacity="0.3"/>
+        <line x1="320" y1="0"  x2="0"   y2="26" stroke="#cc0000" stroke-width="0.8" opacity="0.3"/>
+        <line x1="160" y1="0"  x2="160" y2="26" stroke="#cc0000" stroke-width="0.8" opacity="0.35"/>
+        <path d="M 0,0 Q 80,26 160,0 Q 240,26 320,0"   stroke="#cc0000" stroke-width="1.5" fill="none" opacity="0.45"/>
+        <path d="M 0,13 Q 80,0 160,13 Q 240,0 320,13"  stroke="#cc0000" stroke-width="1"   fill="none" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="lo-inner">
+      <div class="lo-header">
+        <div class="lo-badge">
+          <svg viewBox="0 0 40 40" width="30" height="30">
+            <circle cx="20" cy="20" r="19" fill="#cc0000"/>
+            <ellipse cx="20" cy="25" rx="8" ry="9" fill="#150000"/>
+            <ellipse cx="20" cy="15" rx="6" ry="7" fill="#150000"/>
+            <line x1="12" y1="19" x2="4"  y2="13" stroke="#150000" stroke-width="2"/>
+            <line x1="12" y1="24" x2="3"  y2="23" stroke="#150000" stroke-width="2"/>
+            <line x1="28" y1="19" x2="36" y2="13" stroke="#150000" stroke-width="2"/>
+            <line x1="28" y1="24" x2="37" y2="23" stroke="#150000" stroke-width="2"/>
+          </svg>
+        </div>
+        <div>
+          <div class="lo-to">Untuk: Deswita Ratma Enjellita 🌸</div>
+          <div class="lo-date">09 May 2026</div>
+        </div>
+      </div>
+      <div class="lo-ruled-line"></div>
+      <div class="lo-body">
+        <p>Selamat Ulang Tahun Ma Bestie ysng hobinya marah wkkw,becandaa koo kwkw🤭maksudnya my bestie yg kece badai abis,cantik dan teranjai kwkkw,keren yah sekrang udah umur 17 tahun masa umur 17 tahunn belum bikin ktp siih🫪</p>
+        <p>Semoga Tahun ini 2026 bisa tercapai ya semua keinginannya,dan selalu sehat,panjang umur dan ga marah mulu wkkw nanti cantiknya berkurang loh kalo sering marah kwkw(becanda yah🫣),maaf yah baru ngasih hadiah sama ucapan hari ini,pdhal ultahnya udh lama daei desember kwkw</p>
+        <p>Pokoknya untuk my bestie jangan bosen bosen nerima maaf yah,dan semoga selalu diberi kemudahan dan kemakmuran sama Tuhan,semoga suka yah kartu ucapan kecil kecilan dari gw(ga kecil juga sih soalnya buatnya lama🫪),mungkin hadiah dan ucapannya ga besar sih tapi gw buatnya make hati terdalam dan tertulus coyy asli no hoax hoaxx wkkwkw,udah dlu yah ucapannya takut gamuat kata katanya,Btw Happy Sweet Seventeen ma bestie dari TK</p>
+        <p>(btw screenshot aja yah ucapannya kalo mau di simpen hhe),</p>
+      </div>
+      <div class="lo-footer">
+        <span>Tertandaa,</span>
+        <span class="lo-sign">— Radityos Shiddiq yg Cool dan Dingin banget</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Audio background musik -->
+<audio id="bg-music" loop preload="none"></audio>
+
+<script src="js/app.js"></script>
+</body>
+</html>
